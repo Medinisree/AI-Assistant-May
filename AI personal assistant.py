@@ -3,15 +3,12 @@ import pyttsx3
 import datetime
 import wikipedia
 import webbrowser
-import os
 import time
 import subprocess
 from ecapture import ecapture as ec
 import wolframalpha
-import json
-import requests
 
-print('Hey there I am your AI personal assistant - May')
+print('Hey there I am your personal voice assistant - May')
 
 # Initialize text-to-speech engine
 engine = pyttsx3.init('sapi5')
@@ -47,7 +44,7 @@ def takeCommand():
             return "none"
         return statement.lower()
 
-speak("Hey there I am your AI personal assistant - May")
+speak("Hey there I am your personal voice assistant - May")
 wishMe()
 
 if __name__ == '__main__':
@@ -58,8 +55,8 @@ if __name__ == '__main__':
             continue
 
         if "good bye" in statement or "ok bye" in statement or "stop" in statement:
-            speak('Your personal assistant May is shutting down. Goodbye!')
-            print('Your personal assistant May is shutting down. Goodbye!')
+            speak('Your personal voice assistant May is shutting down. Goodbye!')
+            print('Your personal voice assistant May is shutting down. Goodbye!')
             break
 
         if 'wikipedia' in statement:
@@ -95,7 +92,7 @@ if __name__ == '__main__':
             speak(f"The time is {strTime}")
 
         elif 'who are you' in statement or 'what can you do' in statement:
-            speak('I am May, version 1.0, your personal assistant. I am programmed to perform tasks such as opening YouTube, Google Chrome, Gmail, and StackOverflow, predicting time, taking photos, searching Wikipedia, getting top headline news from Times of India, and answering computational or geographical questions.')
+            speak('I am May, version 1.0, your personal voice assistant. I am programmed to perform tasks such as opening YouTube, Google Chrome, Gmail, and StackOverflow, predicting time, taking photos, searching Wikipedia, getting top headline news from Times of India, and answering computational or geographical questions.')
 
         elif "who made you" in statement or "who created you" in statement or "who discovered you" in statement:
             speak("I was built by Medini Sree")
